@@ -4,16 +4,15 @@ CC = gcc
 CFLAGS = -Wall -Wextra -g
 TARGET = simulador
 
-# lista de arquivos objeto 
+## lista de arquivos objeto 
 OBJS = main.o fila_fifo.o logtree.o escalonador.o
 
-# verificando SO
+## verificando SO
+```makefile
 ifeq ($(OS),Windows_NT)
-    # Comandos para Windows
     RM = del /Q
     EXEC = $(TARGET).exe
 else
-    # Comandos para Linux/Unix
     RM = rm -f
     EXEC = $(TARGET)
 endif
@@ -24,7 +23,7 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(EXEC)
 
-# regras de compilação individual (.c -> .o)
+## regras de compilação individual (.c -> .o)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
