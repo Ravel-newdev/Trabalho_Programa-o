@@ -1,6 +1,6 @@
 ## Simulador de Fila de Banco
 
-## Esse projeto implementa um sistema de simulação de atendimento de Banco utilizando múltiplas filas FIFO e uma árvore binária de busca para logs
+## O projeto implementa um sistema de simulação de atendimento de Banco usando múltiplas filas FIFO e uma árvore binária de busca para logs
 
 ## Compilação e Execução
 
