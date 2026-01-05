@@ -106,15 +106,15 @@ int FVerChavePorPosicao(Fila_FIFO **refFila, int posicao) {
         return -1;
     }
 
-    No *atual = (*refFila)->inicio;
+    No *PontAtual = (*refFila)->inicio;
 
     int i = 0;
-    while (atual != NULL) {
+    while (PontAtual != NULL) {
         if (i == posicao) {
-            return atual->chave;
+            return PontAtual->chave;
         }
 
-        atual = atual->prox;
+        PontAtual = PontAtual->prox;
         i++;
     }
     return -1;
@@ -126,12 +126,12 @@ int FVerValorPorPosicao(Fila_FIFO **refFila, int posicao) {
         return -1;
     }
 
-    No *atual = (*refFila)->inicio;
+    No *PontAtual = (*refFila)->inicio;
 
     int i = 0;
-    while (atual != NULL) {
-        if (i == posicao) return atual->valor;
-        atual = atual->prox;
+    while (PontAtual != NULL) {
+        if (i == posicao) return PontAtual->valor;
+        PontAtual = PontAtual->prox;
         i++;
     }
 
