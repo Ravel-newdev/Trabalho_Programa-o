@@ -1,5 +1,5 @@
 
-#variáveis de Compilação
+#variáveis de compilação
 CC = gcc
 CFLAGS = -Wall -Wextra -g
 TARGET = simulador
@@ -22,7 +22,7 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(EXEC)
 
-# regras de compilação individual (.c -> .o)
+# regras de compilação individual .c -> .o
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
