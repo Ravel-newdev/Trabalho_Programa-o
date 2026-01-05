@@ -1,5 +1,6 @@
 
-### Mateus Nascimento da Mota - 571044
+### Equipe
+#### Mateus Nascimento da Mota - 571044
 
 
 ## Simulador de Fila de Banco
