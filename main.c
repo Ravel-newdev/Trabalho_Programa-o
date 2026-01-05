@@ -20,12 +20,12 @@ int main(int argc, char *argv[]) {
     char nomeEntrada[50];
     char nomeSaida[50];
     
-    // transforma (ex: 1) em "entrada-0001.txt"
+    // transforma ex: 1 em "entrada-0001.txt"
     int idTeste = atoi(argv[1]);
     sprintf(nomeEntrada, "entrada-%04d.txt", idTeste);
     sprintf(nomeSaida, "saida-%04d.txt", idTeste);
 
-    // estruturas padrão PascalCase
+   
     Escalonador meuBanco;
     
     //implementar EConfPorArquivo para ler M, DeltaT e Ni
