@@ -6,7 +6,7 @@
 typedef struct no {
     int chave; 
     int valor; 
-    struct no *proximo;
+    struct no *prox;
 } No;
 
 typedef struct {
@@ -14,13 +14,13 @@ typedef struct {
     No *fim;
 } Fila_FIFO;
 
-void FInicializar(Fila_FIFO **f);
-int FInserir(Fila_FIFO **f, int chave, int valor);
-int FPegaProximaChave(Fila_FIFO **f);        
-int FVerProximaChave(Fila_FIFO **f);         
-int FVerProximoValor(Fila_FIFO **f);         
-int FNumElementos(Fila_FIFO **f);
-int FVerChavePorPosicao(Fila_FIFO **f, int posicao); 
-int FVerValorPorPosicao(Fila_FIFO **f, int posicao); 
+void FInicializar(Fila_FIFO **refFila);
+int FInserir(Fila_FIFO **refFila, int chave, int valor);
+int FPegaProximaChave(Fila_FIFO **refFila);        
+int FVerProximaChave(Fila_FIFO **refFila);         
+int FVerProximoValor(Fila_FIFO **refFila);         
+int FNumElementos(Fila_FIFO **refFila);
+int FVerChavePorPosicao(Fila_FIFO **refFila, int posicao); 
+int FVerValorPorPosicao(Fila_FIFO **refFila, int posicao); 
 
 #endif
