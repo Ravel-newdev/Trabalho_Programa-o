@@ -22,7 +22,7 @@ int FInserir(Fila_FIFO **refFila, int chave, int valor) {
     No *NOatual = (*refFila)->inicio;
     while (NOatual != NULL) {
         if (NOatual->chave == chave) {
-            return 0; //aqui a chave duplicada encontrada não sera inserida
+            return 0; 
         }
         NOatual = NOatual->prox;
     }
