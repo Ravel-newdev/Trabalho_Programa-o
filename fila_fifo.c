@@ -29,7 +29,7 @@ int FInserir(Fila_FIFO **refFila, int chave, int valor) {
 
     /* o novo nó */
     No *novo = (No *)malloc(sizeof(No));
-    if (novo == NULL) return 0; //se falha de memória
+    if (novo == NULL) return 0; 
 
     novo->chave = chave;
     novo->valor = valor;

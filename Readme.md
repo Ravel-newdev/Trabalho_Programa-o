@@ -1,6 +1,10 @@
+
+### Mateus Nascimento da Mota - 571044
+
+
 ## Simulador de Fila de Banco
 
-## O projeto implementa um sistema de simulação de atendimento de Banco usando múltiplas filas FIFO e uma árvore binária de busca para logs
+## O projeto implementa um sistema de simulação de atendimento de Banco usando filas FIFO e uma árvore binária de busca
 
 ## Compilação e Execução
 
@@ -26,7 +30,7 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(EXEC)
 
-## regras de compilação individual (.c -> .o)
+## regras de compilação individual .c -> .o
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
