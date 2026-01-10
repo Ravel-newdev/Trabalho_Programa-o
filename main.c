@@ -1,44 +1,31 @@
-
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-//incluindo contratos dos outros membros
-#include "fila_fifo.h"
-#include "logtree.h"
 #include "escalonador.h"
 
-int main(int argc, char *argv[]) {
-    //verificando argumentos de linha de comando
-    if (argc < 2) {
-        printf("Uso: %s <numero_do_teste>\n", argv[0]);
-        printf("Exemplo: %s 0001\n", argv[0]);
-        return 1;
-    }
-
-    //formatando nomes de arquivo
+int main(int argc, char *argv[])
+{
+    Escalonador *meuBanco = (Escalonador *)malloc(sizeof(Escalonador));
     char nomeEntrada[50];
     char nomeSaida[50];
+    int idTeste;
     
-    // transforma ex: 1 em "entrada-0001.txt"
-    int idTeste = atoi(argv[1]);
-    sprintf(nomeEntrada, "entrada-%04d.txt", idTeste);
-    sprintf(nomeSaida, "saida-%04d.txt", idTeste);
-
-   
-    Escalonador meuBanco;
-    
-    //implementar EConfPorArquivo para ler M, DeltaT e Ni
-    if (EConfPorArquivo(&meuBanco, nomeEntrada) != 0) {
-        fprintf(stderr, "Erro ao abrir ou ler o arquivo de configuracao: %s\n", nomeEntrada);
-        return 1;
+    // verificando argumentos de linha de comando
+    if (argc < 2) {
+        printf("Número de argumentos inválido.\n");
+        printf("Veja alguns exemplos de como você poderia usar:\n");
+        printf("%s 0001\n", argv[0]);
+        printf("%s 1\n", argv[0]);
+        return EXIT_FAILURE;
     }
 
-    // execução da simulação
-    printf("Iniciando simulacao para o teste: %04d\n", idTeste);
-    ERodar(&meuBanco, nomeEntrada, nomeSaida);
+    idTeste = atoi(argv[1]);
 
-    printf("Simulacao concluida. Resultado em: %s\n", nomeSaida);
+    // ex: transforma o 1 de idTeste em "entrada-0001.txt"
+    sprintf(nomeEntrada, "entradas/entrada-%04d.txt", idTeste);
+    sprintf(nomeSaida, "resultados/saida-%04d.txt", idTeste);
+    
+    ERodar(meuBanco, nomeEntrada, nomeSaida);
 
-    return 0;
+    return 1;
 }
