@@ -23,9 +23,9 @@ int main(int argc, char *argv[])
 
     // ex: transforma o 1 de idTeste em "entrada-0001.txt"
     sprintf(nomeEntrada, "entradas/entrada-%04d.txt", idTeste);
-    sprintf(nomeSaida, "resultados/saida-%04d.txt", idTeste);
+    sprintf(nomeSaida, "resultados/resultado-%04d.txt", idTeste);
     
-    ERodar(meuBanco, nomeEntrada, nomeSaida);
+    e_rodar(meuBanco, nomeEntrada, nomeSaida);
 
     return 1;
 }

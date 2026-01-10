@@ -3,6 +3,8 @@
 
 #include "escalonador.h"
 #include "fila_fifo.h"
+#include "logtree.h"
+#include <stdio.h>
 
 typedef struct {
     int livre;
@@ -10,9 +12,9 @@ typedef struct {
     int conta;
 } Caixa;
 
-void atualizaTempoCaixas(Caixa *caixas, int M);
-int pegaCaixaLivre(Caixa *caixas, int M);
-int existemCaixasOcupados(Caixa *caixas, int M);
-void rodadaAtendimento(Escalonador *esc, Caixa *caixas);
+void atualiza_tempo_caixas(Caixa *caixas, int M);
+int pega_caixa_livre(Caixa *caixas, int M);
+int existem_caixas_ocupados(Caixa *caixas, int M);
+void rodada_atendimento(Escalonador *esc, Caixa *caixas, Log **raiz_log, int tempo_atual, FILE *out);
 
 #endif
