@@ -1,12 +1,9 @@
-
 #variáveis de compilação
 CC = gcc
 CFLAGS = -Wall -Wextra -g
 TARGET = simulador
 
-
-OBJS = main.o fila_fifo.o logtree.o escalonador.o
-
+OBJS = main.o fila_fifo.o logtree.o escalonador.o caixa.o
 
 ifeq ($(OS),Windows_NT)
     RM = del /Q
@@ -15,7 +12,6 @@ else
     RM = rm -f
     EXEC = $(TARGET)
 endif
-
 
 all: $(TARGET)
 
@@ -28,8 +24,7 @@ $(TARGET): $(OBJS)
 
 #para limpar arquivos temporários make clean
 clean:
-	$(RM) *.o $(EXEC) saida-*.txt
-
+	$(RM) *.o $(EXEC) resultados/*
 
 run: all
 	./$(EXEC) $(X)

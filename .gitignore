@@ -1,13 +1,12 @@
-
-
 simulador
 simulador.exe
 *.o
 *.out
 
-saida-*.txt
-
-
 .vscode/
 .DS_Store
 Thumbs.db
+
+entradas/*
+saidas/*
+resultados/*
