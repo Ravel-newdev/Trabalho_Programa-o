@@ -63,4 +63,4 @@ OK: Sem diferenças para 0003
 ...
 ```
 
-Observação: é esperado que os arquivos de entrada e saída que vão ser executados estejam em diretórios `/entradas` e `/saidas`, isso pode ser mudado alterando as variáveis nomeEntrada e nomeSaida em `main.c`.
+Observação: é esperado que os arquivos de entrada e saída que vão ser executados estejam em diretórios `/entradas` e `/saidas` na raiz do projeto, isso pode ser mudado alterando as variáveis nomeEntrada e nomeSaida em `main.c`.
