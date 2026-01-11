@@ -1,6 +1,7 @@
 ### Equipe
 #### Mateus Nascimento da Mota - 571044
 #### Arthur Pereira dos Santos - 579364
+#### Ravel Costa de Araújo - 568026
 
 
 ## Simulador de Fila de Banco
